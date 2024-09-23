@@ -1,0 +1,19 @@
+{
+  "name": "ipz_3",
+  "version": "1.0.0",
+  "description": "My awesome project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "romabuchuk",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.11.0",
+    "webpack": "5.94.0"
+  }
+}
