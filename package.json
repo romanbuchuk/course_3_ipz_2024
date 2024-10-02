@@ -12,6 +12,7 @@
     "lint:fix": "eslint --fix src/",
     "test:open": "cypress open",
     "test:ct": "cypress run --component --browser chrome",
+    "lint:staged": "lint-staged",
     "prepare": "husky"
   },
   "author": "romabuchuk",
