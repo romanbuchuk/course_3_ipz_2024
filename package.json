@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "echo \"start script\"",
-    "start:dev": "webpack serve -c config/webpack.config",
-    "build": "webpack -c config/webpack.config.production.js",
-    "build:dev": "webpack -c config/webpack.config.development.js",
+    "start:dev": "webpack serve -c config/webpack.development.config.js",
+    "build": "webpack -c config/webpack.production.config.js",
+    "build:dev": "webpack -c config/webpack.development.config.js",
     "lint": "eslint src/",
     "lint:fix": "eslint --fix src/",
     "test:open": "cypress open",
