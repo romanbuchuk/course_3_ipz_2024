@@ -526,3 +526,10 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 /.idea/vcs.xml
+/.idea/.gitignore
+/.idea/course_3_ipz_2024.iml
+/.idea/git_toolbox_blame.xml
+/.idea/git_toolbox_prj.xml
+/.idea/modules.xml
+/.idea/prettier.xml
+/.idea/inspectionProfiles/Project_Default.xml
