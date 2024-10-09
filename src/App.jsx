@@ -1,3 +1,7 @@
+import Button from '@components/Button';
+import Header from '@components/Header';
+// import { Header as MyHeader } from '@components/Header';
+// import * as React from 'react';
 import React, { useState } from 'react';
 
 import styles from './App.css';
@@ -17,73 +21,32 @@ const content = [
     ],
 ];
 
-// export default function App() {
-//     const [activeContentIndex, setActiveContentIndex] = useState(0);
-//
-//     return (
-//         <div className={styles.container}>
-//             <header className={styles.header}>
-//                 <img src="react-logo-xs.png" alt="React logo" />
-//                 <div>
-//                     <h1>React.js</h1>
-//                     <p>i.e., using the React library for rendering the UI</p>
-//                 </div>
-//             </header>
-//
-//             <div id="tabs" className={styles.tabs}>
-//                 <menu>
-//                     <button
-//                         className={activeContentIndex === 0 && styles.active}
-//                         onClick={() => setActiveContentIndex(0)}
-//                     >
-//                         Why React?
-//                     </button>
-//                     <button
-//                         className={activeContentIndex === 1 && styles.active}
-//                         onClick={() => setActiveContentIndex(1)}
-//                     >
-//                         Core Features
-//                     </button>
-//                     <button
-//                         className={activeContentIndex === 2 && styles.active}
-//                         onClick={() => setActiveContentIndex(2)}
-//                     >
-//                         Related Resources
-//                     </button>
-//                 </menu>
-//                 <div id="tab-content" className={styles['tab-content']}>
-//                     <ul>
-//                         {content[activeContentIndex].map((item) => (
-//                             <li key={item}>{item}</li>
-//                         ))}
-//                     </ul>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
 const App = () =>  {
     const [activeContentIndex, setActiveContentIndex] = useState(0);
 
+    // function f(activeIndex) {
+    //     return function () {
+    //         setActiveContentIndex(activeIndex);
+    //     }
+    // }
+
+    const buttonClickHandler = (activeIndex) => () => {
+        console.log(activeIndex);
+        setActiveContentIndex(activeIndex);
+    };
+
     return (
-        <div className={styles.container}>
-            <header className={styles.header}>
-                <img src="react-logo-xs.png" alt="React logo" />
-                <div>
-                    <h1>React.js</h1>
-                    <p>i.e., using the React library for rendering the UI</p>
-                </div>
-            </header>
+        <div className={styles.container} >
+            <Header />
 
             <div id="tabs" className={styles.tabs}>
                 <menu>
-                    <button
+                    <Button
                         className={activeContentIndex === 0 && styles.active}
-                        onClick={() => setActiveContentIndex(0)}
+                        handleClick={buttonClickHandler(0)}
                     >
                         Why React?
-                    </button>
+                    </Button>
                     <button
                         className={activeContentIndex === 1 && styles.active}
                         onClick={() => setActiveContentIndex(1)}

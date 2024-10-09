@@ -8,4 +8,5 @@ import App from './App'; // require('./App').default
 const containerElement = document.querySelector('#root');
 
 const root = createRoot(containerElement);
+
 root.render(<App />);
